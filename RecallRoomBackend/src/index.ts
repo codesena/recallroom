@@ -4,8 +4,10 @@ import { ContentModel, LinkModel, UserModel } from "./db";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt"; // Correctly using bcryptjs (change: ensure proper bcryptjs usage)
 import { userMiddleware } from "./middleware";
+import "dotenv/config";
 const JWT_USER_KEY = "senate";
 const app = express();
+const MONGO_URI = process.env.MONGO_URI as string;
 import cors from "cors";
 import { random } from "./utils";
 //zod validation pending
@@ -207,9 +209,7 @@ app.get("/api/v1/brain/:shareLink", async (req, res) => {
 
 const Connectdb = async () => {
   try {
-    await mongoose.connect(
-      "mongodb+srv://senatenikhil:Kbo8FJegztKrOwvN@cluster0.izhn8.mongodb.net/RecallRoom"
-    );
+    await mongoose.connect(MONGO_URI);
     console.log("DB Connected");
   } catch (err) {
     console.log("Unable to connect to DB With err " + err);
