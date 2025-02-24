@@ -1,0 +1,21 @@
+ Rerender it on delete after removal of card//solved->using state
+ opacity issue// solved-> with bg-red-100/40; /40 means opacity of 40 percent only on the parent 
+ sidebar stick and main content slide// done
+ sidebar should be functional//done
+ show only selected icon// done
+ if cross is submit then dont refetch the cards// done by introducing new state variable
+ if all the values are not enterd and submit is show popup to enter all details// done using new state varibale 
+ prevent refetch on toggleing // done just removing toggle from the dependency array
+
+
+
+ //minor problems
+ add content and remove content button correct it ui not looking good to me it is expanding on decreasing width
+ share link activate for particular card
+ twitter needs 2 referesh to fetch data why? correct it
+ add opening closing sidebar on 
+ add logout button
+
+
+ @need to study more
+ card dont cover blank issue// unable to solve need to learn from ui-ux concept
